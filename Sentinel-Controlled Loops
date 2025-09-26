@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+int main()
+{
+// Example 1: Read numbers until -1 is entered
+int num;
+while (1) {
+    scanf("%d", &num);
+    if (num == -1) break;
+    printf("You entered: %d\n", num);
+}
+
+// Example 2: Sum until 0 is entered
+int sum = 0, input;
+while (1) {
+    scanf("%d", &input);
+    if (input == 0) break;
+    sum += input;
+}
+printf("Total sum: %d\n", sum);
+
+// Example 3: Count positive numbers until negative is entered
+int count = 0, val;
+while (1) {
+    scanf("%d", &val);
+    if (val < 0) break;
+    count++;
+}
+printf("Count of positives: %d\n", count);
+
+// Example 4: Print characters until 'x' is entered
+char ch;
+while (1) {
+    scanf(" %c", &ch);
+    if (ch == 'x') break;
+    printf("Char: %c\n", ch);
+}
+
+// Example 5: Find max until -999 is entered
+int max = -9999, temp;
+while (1) {
+    scanf("%d", &temp);
+    if (temp == -999) break;
+    if (temp > max) max = temp;
+}
+printf("Max: %d\n", max);
+
+    return 0;
+}
