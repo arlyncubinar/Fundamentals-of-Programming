@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main()
+{
+// Example 1: Print 1 to 5
+int i = 1;
+do {
+    printf("%d\n", i);
+    i++;
+} while (i <= 5);
+
+// Example 2: Menu until user exits
+int choice;
+do {
+    printf("1. Option A\n2. Option B\n0. Exit\n");
+    scanf("%d", &choice);
+} while (choice != 0);
+
+// Example 3: Validate input between 1 and 10
+int num;
+do {
+    printf("Enter a number (1-10): ");
+    scanf("%d", &num);
+} while (num < 1 || num > 10);
+
+// Example 4: Print even numbers up to 10
+int j = 2;
+do {
+    printf("%d\n", j);
+    j += 2;
+} while (j <= 10);
+
+// Example 5: Repeat until 'n' is entered
+char again;
+do {
+    printf("Running...\n");
+    printf("Continue? (y/n): ");
+    scanf(" %c", &again);
+} while (again != 'n');
+
+    return 0;
+}
