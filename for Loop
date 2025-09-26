@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main()
+{
+// Example 1: Print 1 to 10
+for (int i = 1; i <= 10; i++) {
+    printf("%d\n", i);
+}
+
+// Example 2: Print multiplication table of 5
+for (int i = 1; i <= 10; i++) {
+    printf("5 x %d = %d\n", i, 5*i);
+}
+
+// Example 3: Print array elements
+int arr[] = {10, 20, 30, 40, 50};
+for (int i = 0; i < 5; i++) {
+    printf("%d\n", arr[i]);
+}
+
+// Example 4: Reverse print 10 to 1
+for (int i = 10; i >= 1; i--) {
+    printf("%d\n", i);
+}
+
+// Example 5: Print ASCII values of A to E
+for (char c = 'A'; c <= 'E'; c++) {
+    printf("%c = %d\n", c, c);
+}
+
+    return 0;
+}
