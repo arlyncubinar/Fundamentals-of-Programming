@@ -1,0 +1,63 @@
+#include <stdio.h>
+
+int main() {
+    int choice, quantity;
+    float price, total = 0, payment, change;
+    char again;
+
+    do {
+        printf("What do you want to purchase?\n");
+        printf("1. Vegetable (P54.50/Kg)\n");
+        printf("2. Fruits (P120.00 - P150.00/Kg)\n");
+        printf("3. Milk (P98.45/bottle)\n");
+        printf("4. Soap (P29.45/bar)\n");
+        printf("5. Shampoo and Conditioner (P140.00/bottle)\n");
+        printf("Enter your choice (1-5): ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                price = 54.50;
+                printf("Enter quantity in Kg: ");
+                break;
+            case 2:
+                price = 135.00; // average price
+                printf("Enter quantity in Kg: ");
+                break;
+            case 3:
+                price = 98.45;
+                printf("Enter number of bottles: ");
+                break;
+            case 4:
+                price = 29.45;
+                printf("Enter number of bars: ");
+                break;
+            case 5:
+                price = 140.00;
+                printf("Enter number of bottles: ");
+                break;
+            default:
+                printf("Invalid choice.\n");
+                continue;
+        }
+
+        scanf("%d", &quantity);
+        total += price * quantity;
+
+        printf("Do you want to purchase again (Y/N)? ");
+        scanf(" %c", &again); 
+    } while (again == 'Y' || again == 'y');
+
+    printf("Total purchase: P%.2f\n", total);
+    printf("Enter payment amount: P");
+    scanf("%f", &payment);
+
+    change = payment - total;
+    if (change < 0) {
+        printf("Insufficient payment. You still owe P%.2f\n", -change);
+    } else {
+        printf("Your change: P%.2f\n", change);
+    }
+
+    return 0;
+}
